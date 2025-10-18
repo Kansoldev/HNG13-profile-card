@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile card | Kansoldev</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <main>
+      <article class="profile-card" data-testid="test-profile-card">
+        <header>
+          <figure class="profile-image">
+            <img
+              src="./profile.jpg"
+              alt="avatar image of Yahaya oyinkansola"
+              data-testid="test-user-avatar"
+            />
+          </figure>
+
+          <h2 class="profile-name" data-testid="test-user-name">
+            Yahaya Oyinkansola
+          </h2>
+        
+          <p class="profile-title">Front End Developer</p>
+        </header>
+
+        <p class="profile-description" data-testid="test-user-bio">
+          A front end developer specializing in helping non technical
+          business owners build and grow an online presence
+        </p>
+
+        <time data-testid="test-user-time">
+          Current time: <span id="milliseconds">12:22:23 PM</span>
+        </time>
+
+        <section class="extras">
+          <details data-testid="test-user-hobbies">
+            <summary>Hobbies</summary>
+            
+            <ul>
+              <li>Football</li>
+              <li>Productivity</li>
+              <li>Reading books</li>
+            </ul>
+          </details>
+
+          <details data-testid="test-user-dislikes" style="margin-top: .4rem">
+            <summary>Dislikes</summary>
+            
+            <ul>
+              <li>Dirtiness</li>
+              <li>Lack of Integrity</li>
+            </ul>
+          </details>
+        </section>
+
+        <nav class="profile-links" data-testid="test-user-social-links">
+          <a
+            href="https://github.com/Kansoldev"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-github"
+          >GitHub</a>
+          
+          <a
+            href="https://linkedin.com/in/oyinkansola-yahaya"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-linkedin"
+          >LinkedIn</a>
+
+          <a
+            href="https://x.com/Kansoldev"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-x"
+          >X</a>
+        </nav>
+      </article>
+    </main>
+
+    <script>
+      const currentDate = new Date();
+      document.querySelector("#milliseconds").textContent = `${currentDate.getMilliseconds()}ms`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dt dd {
+  margin: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+time {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.profile-card {
+  background-image: linear-gradient(to bottom, #283655, #7b7d83);
+  width: 100%;
+  max-width: 450px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  height: auto;
+}
+
+@media (min-width: 450px) {
+  .profile-card {
+    padding-inline: 2rem;
+  }
+}
+
+.profile-image {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+.profile-name {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.7rem;
+  margin-top: 0.6rem;
+}
+
+.profile-title {
+  color: #fff;
+  margin-top: 0.6rem;
+}
+
+.profile-description {
+  margin-block: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.profile-links {
+  width: 100%;
+}
+
+.profile-links a {
+  display: block;
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  width: 100%;
+  padding-block: 10px;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.profile-links a:hover {
+  background-color: #283655;
+  color: #fff;
+}
+
+.profile-links a:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.extras {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  text-align: left; 
+}
+
+.extras summary {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.extras ul {
+  margin-top: 0.5rem;
+}
